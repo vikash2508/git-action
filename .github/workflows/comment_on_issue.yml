@@ -13,8 +13,8 @@ jobs:
     - name: Create comment
       uses: peter-evans/create-or-update-comment@v3
       with:
-          issue-number: '${{ github.event.issue.number }}'
-          body:
+        issue-number: '${{ github.event.issue.number }}'
+        body:
             This is a automatic created github-action comment
-          reactions: '+1'
+        reactions: '+1'
     
