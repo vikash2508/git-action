@@ -14,8 +14,7 @@ jobs:
       uses: peter-evans/create-or-update-comment@v3
       with:
           issue-number: '${{ github.event.issue.number }}'
-          body: |
+          body:
             This is a automatic created github-action comment
-          
           reactions: '+1'
     
