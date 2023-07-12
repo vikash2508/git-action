@@ -10,3 +10,12 @@ jobs:
     - name: "github context"
       run: echo '${{ toJSON(github.event) }}'
       shell: bash
+    - name: Create comment
+      uses: peter-evans/create-or-update-comment@v3
+      with:
+          issue-number: '${{ github.event.issue.number }}'
+          body: |
+            This is a automatic created github-action comment
+          
+          reactions: '+1'
+    
